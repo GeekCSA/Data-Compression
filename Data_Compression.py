@@ -1,7 +1,6 @@
 import math
 import numpy as np
 
-
 def find_self_dangling_suffix(S, T, same):
     s = set()
 
