@@ -15,13 +15,9 @@ The compression stage consists of three parts:
 
 The decoding stage consists of the same three steps but in reverse order.
 
-The compression quality is measured according to the bit / character ratio marked in ECP .... Encoding is best considered if ECP = H (P) = \ sum.
+The compression quality is measured according to the $\frac{bits}{character}$ ratio marked in $E(C,P) = \sum_{i  = 0}^{n} \left(p_i*|c_i|\right)$ where $p_i$ is the probability that the word $i$ will appear in the text and $|c_i|$ is the length of the word The code representing the $i$ character. Encoding is best considered if $E(C, P) = H(P) = -\sum_{i = 1}^{n}{p_i*log_2(p_i)}$.
 
-
-One of the known compression methods is Huffman Encoding, which always manages to construct a minimum encoding that always exists for this encoding that is equal to H (P).
-
-
-
+One of the known compression methods is Huffman Encoding, which always manages to construct a minimum encoding that always exists for this encoding that is equal to $H(P)$.
 
 Dependencies:
 * Python 3.6
@@ -29,7 +25,7 @@ Dependencies:
 * numpy 1.15.4
 
 List of files:
-Data_Compression.py - Contains a class named CodeWords that represents any encoding.
-This class has several methods that calculate all kinds of metrics on the code such as ECP ... and H (P
+* Data_Compression.py - Contains a class named CodeWords that represents any encoding.
+    This class has several methods that calculate all kinds of metrics on the code such as $E(C, P)$ and $H(P)$.
 
-Huffman_Encoding.py - Contains a class that encapsulates certain characters and their probabilities (appearing in text) calculates the Huffman code
+* Huffman_Encoding.py - Contains a class that encapsulates certain characters and their probabilities (appearing in text) calculates the Huffman code.
