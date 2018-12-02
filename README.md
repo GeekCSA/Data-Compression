@@ -15,7 +15,7 @@ The compression stage consists of three parts:
 
 The decoding stage consists of the same three steps but in reverse order.
 
-The compression quality is measured according to the $\frac{bits}{char}$ ratio marked in $E(C,P) = \sum_{i  = 0}^{n} \left(p_i*|c_i|\right)$ where $p_i$ is the probability that the word $i$ will appear in the text and $|c_i|$ is the length of the word The code representing the $i$ character. Encoding is best considered if $$E(C, P) = H(P) = -\sum_{i = 1}^{n}{p_i*log_2(p_i)}$$.
+The compression quality is measured according to the $\frac{bits}{char}$ ratio marked in $E(C,P) = \sum_{i  = 0}^{n} \left(p_i*|c_i|\right)$ where $p_i$ is the probability that the word $i$ will appear in the text and $|c_i|$ is the length of the word The code representing the $i$ character. Encoding is best considered if $E(C, P) = H(P) = -\sum_{i = 1}^{n}{p_i*log_2(p_i)}$.
 
 One of the known compression methods is Huffman Encoding, which always manages to construct a minimum encoding that always exists for this encoding that is equal to $H(P)$.
 
